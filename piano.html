@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>My Webpage Title</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Roboto Slab", "Rockwell", "Constantia", serif;
+      background-color: #0B2838;
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #d3af37;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: lightgoldenrodyellow;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+    .hero h1, .hero h2 {
+      position: relative;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .hero h1 { font-size: 50px; font-weight: 700; }
+    .hero h2 { font-size: 22px; margin-top: 10px; font-weight: 300; }
+
+    /* MAIN GOLD BOX */
+    .large-box {
+      background-color: #d3af37;
+      border-radius: 25px;
+      padding: 30px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* LEFT + RIGHT LAYOUT */
+    .inner-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* LEFT TALL BOX */
+    .long-left {
+      flex: 1;
+      background-color: white;
+      color: #001f4d;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      min-width: 260px;
+    }
+
+    /* RIGHT COLUMN OF 3 BOXES */
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .small-box {
+      background-color: white;
+      color: #001f4d;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    p {
+      margin: 8px 0;
+      padding-left: 10px;
+    }
+
+    /* Hidden text for toggle */
+    .hidden-text {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .toggle-btn {
+      color: #0056b3;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+      padding-left: 10px;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .inner-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="my hobby.html" class="active">Home</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+  
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Moments That Define Me</h1>
+    <h2>Explore the passions behind my everyday life.</h2>
+  </div>
+
+  <!-- GOLD BOX -->
+  <div class="large-box">
+    <div class="inner-container">
+
+      <!-- LEFT BOX -->
+      <div class="long-left">
+        <h3>My journey of piano</h3>
+
+        <p>I started piano when I was six.At first, I didn’t like playing </p>
+        <p>the piano because my dad forced me to, and we often </p>
+        <p>argued about it. There were many times I felt like giving </p>
+        <p> up, but somehow I never did. Gradually, I realized that the </p>
+        <p>piano was my only talent, something that was truly mine. I </p>
+        <p>started practicing daily, and over time, it grew from a </p>
+        <p>chore into one of my favorite hobbies. Now, playing the </p>
+        <p>piano is a part of me—a way to express my emotions, </p>
+        <p>challenge myself, and find joy in every note. I cherish </p>
+        <p>every moment at the keys, grateful for the journey that </p>
+        <p>transformed something I resisted into something I deeply love. </p>
+
+        <img src="piapianono.jpg" width="400" height="200" alt=""/>
+      </div>
+
+      <!-- RIGHT SIDE BOXES -->
+      <div class="right-column">
+
+        <!-- 1st small box -->
+        <div class="small-box">
+          <h3>My favorite pianist</h3>
+          <p>My favorite pianist captivates me with their </p>
+          <p>expressive playing and technical brilliance, </p>
+          <p>bringing each piece to life with emotion and depth.</p>
+          <a href="favorite pianist.html">Read more »</a>
+        </div>
+
+        <!-- BENEFITS BOX — UPDATED ONLY THIS ONE -->
+        <div class="small-box">
+          <h3>Benefits of playing piano</h3>
+
+          <p>Piano not only helps with brain skills and </p>
+          <p>coordination, but also sparks joy and self-expression.</p>
+          <p>Visit our site to discover all the benefits!</p>
+
+          <!-- hidden long paragraph -->
+          <p class="hidden-text" id="benefitText">
+            Playing piano improves memory, focus, and multitasking, because you read music and coordinate both hands at the same time. 
+            It helps reduce stress and gives you a healthy emotional outlet. 
+            Physically, it builds finger strength and coordination. 
+            It also encourages creativity, teaches discipline through regular practice, and boosts confidence when you see progress or perform. 
+            Plus, it’s a lifelong skill that brings enjoyment at any age.
+          </p>
+
+          <span class="toggle-btn" onclick="toggleBenefits()">Read more »</span>
+        </div>
+
+        <div class="small-box">
+          <h3>Tips for beginner</h3>
+          <p>Sharing my favorite piano pieces, tips for </p>
+          <p>beginners, and the passion behind every </p>
+          <p>performance, I hope to inspire fellow music lovers </p>
+          <p>to explore, learn, and fall in love with the piano.</p>
+          <a href="tips.html">Read more »</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleBenefits() {
+      const text = document.getElementById("benefitText");
+      const btn = document.querySelector(".toggle-btn");
+
+      if (text.style.display === "block") {
+        text.style.display = "none";
+        btn.textContent = "Read more »";
+      } else {
+        text.style.display = "block";
+        btn.textContent = "Read less «";
+      }
+    }
+  </script>
+
+</body>
+</html>

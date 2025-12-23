@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Webpage Title</title>
+  <style>
+    /* Include padding/border in width calculations */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Roboto Slab", "Rockwell", "Constantia", serif;
+      background-color: #0B2838;
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #d3af37;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: lightgoldenrodyellow;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    .hero h1, .hero h2 {
+      position: relative;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    .hero h1 { font-size: 50px; font-weight: 700; }
+    .hero h2 { font-size: 22px; margin-top: 10px; font-weight: 300; }
+
+    /* MAIN LARGE BOX */
+    .large-box {
+      background-color: #d3af37;
+      border-radius: 25px;
+      padding: 30px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* INNER BOXES CONTAINER */
+    .inner-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .long-box, .small-box {
+      background-color: white;
+      color: #001f4d; /* navy blue */
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Top long box takes full width */
+    .long-box {
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Bottom two boxes side by side */
+    .small-box {
+      flex: 1;
+      min-width: 200px;
+      text-align: left;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    p {
+      margin: 8px 0;
+      padding-left: 10px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .inner-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="my hobby.html" class="active">Home</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+     
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Moments That Define Me</h1>
+    <h2>Explore the passions behind my everyday life.</h2>
+  </div>
+
+  <!-- MAIN LARGE BOX -->
+  <div class="large-box">
+    <div class="inner-container">
+      <!-- Long Box on Top -->
+      <div class="long-box">
+        <h3>Benefit of watching movies</h3>
+        <p>Watching movies is beneficial because they relieve stress, give you an emotional break, and can improve your mood. </p>
+		 <p> They help you learn new ideas, cultures, and perspectives, which can make you more understanding and empathetic.</p> 
+		  <p>Movies also bring people together, making them great for bonding and social connection. They boost creativity and </p>
+		<p>inspiration, support your mental and emotional well-being, and some genres even improve critical thinking and </p>
+		<p>language skills. And of course, they offer simple, enjoyable entertainment.</p>
+      </div>
+
+      <!-- Bottom Two Small Boxes -->
+      <div class="small-box">
+        <h3>Recommend applications</h3>
+        <p>Our recommendation feature gives you quick,</p>
+		 <p> personalized suggestions, helping you find the best </p>
+		<p>content faster and enjoy a smoother, more satisfying </p>
+	  <p>experience that’s perfectly tailored to your needs.</p>
+		  <a href="movie applications.html">Read more »</a>
+      </div>
+
+      <div class="small-box">
+        <h3>My favorite movies</h3>
+        <p>I love my favorite movies because they let me escape,</p>
+		 <p> feel different emotions, and explore new ideas. They </p>
+		<p>inspire me, make me laugh or think, and always leave </p>
+       	 <p> me with memorable experiences I can enjoy again</p>
+        	<p>and again.</p>
+		   <a href="favorite movie.html">Read more »</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
